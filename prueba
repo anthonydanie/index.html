@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Sitio - Demo</title>
+  <meta name="description" content="Página demo creada para publicar en GitHub Pages o cualquier hosting.">
+  <style>
+    /* Reset muy pequeño */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.4;color:#111}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{background:linear-gradient(135deg,#0f172a,#0ea5a6);color:#fff;padding:18px 0;position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:700;font-size:1.1rem;letter-spacing:0.2px}
+    nav ul{display:flex;gap:12px;list-style:none}
+    .btn{display:inline-block;padding:8px 14px;border-radius:8px;background:#fff;color:#0f172a;font-weight:600}
+    .hamburger{display:none;cursor:pointer;padding:8px;border-radius:8px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .hero h1{font-size:2rem;margin-bottom:12px;color:#061226}
+    .hero p{color:#334155;margin-bottom:18px}
+    .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.08)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+    .feature{padding:18px;border-radius:10px;background:linear-gradient(180deg,#f8fafc,#fff);border:1px solid #eef2f7}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+    .contact{display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:24px}
+    footer{margin-top:32px;padding:18px 0;color:#475569;text-align:center;border-top:1px solid #eef2f7}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero,.contact{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      header{padding:12px}
+      .nav{gap:8px}
+      nav ul{display:none}
+      .hamburger{display:block}
+      .hero h1{font-size:1.5rem}
+      .features{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+
+    /* small helpers */
+    .muted{color:#64748b}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .pill{background:#eef2ff;color:#0b5bff;padding:6px 10px;border-radius:999px;font-weight:600}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #d1d5db;font-size:0.95rem}
+    label{display:block;margin-bottom:6px;font-size:0.85rem;color:#334155}
+    .submit{background:#0ea5a6;color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+    .small{font-size:0.85rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">MiSitio<span style="opacity:.85">.dev</span></div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="small">Inicio</a></li>
+          <li><a href="#features" class="small">Características</a></li>
+          <li><a href="#galeria" class="small">Galería</a></li>
+          <li><a href="#contacto" class="small">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn" href="https://anthonydanie.github.io/web-proyecto1/" target="_blank" rel="noreferrer">Ver Demo</a>
+        <div class="hamburger" id="menuBtn" aria-hidden="true" title="abrir menú">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="2" rx="1" fill="#fff"/><rect y="6" width="20" height="2" rx="1" fill="#fff"/><rect y="12" width="20" height="2" rx="1" fill="#fff"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <span class="pill">Demo · GitHub Pages</span>
+        <h1>Construye rápido tu sitio y publícalo en GitHub Pages</h1>
+        <p class="muted">Este ejemplo te muestra una página estática moderna lista para editar. Cambia el contenido, agrega imágenes y sube la carpeta a GitHub para publicar fácilmente.</p>
+
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <a class="submit" href="#contacto">Contactar</a>
+          <a class="small" href="#features" style="align-self:center;padding:8px 12px;background:#fff;border-radius:8px">Ver características</a>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <div class="kpi">
+            <div>
+              <div style="font-size:1.3rem;font-weight:700">100+</div>
+              <div class="muted small">Proyectos</div>
+            </div>
+            <div style="border-left:1px solid #eef2f7;height:42px;margin-left:12px;padding-left:12px">
+              <div style="font-size:1.3rem;font-weight:700">24/7</div>
+              <div class="muted small">Soporte</div>
+            </div>
+          </div>
+          <p class="small muted" style="margin-top:12px">Usa este recuadro para destacar métricas, enlaces o llamadas a la acción.</p>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-bottom:8px">Instalación rápida</h3>
+          <pre style="background:#0b1220;color:#bcd; padding:12px;border-radius:8px;font-size:0.85rem;overflow:auto">
+# guarda como index.html y sube a GitHub
+git init
+git add .
+git commit -m "primera versión"
+git branch -M main
+git remote add origin https://github.com/tuusuario/web-proyecto1.git
+git push -u origin main
+          </pre>
+          <p class="small muted" style="margin-top:8px">Luego activa GitHub Pages en Settings → Pages y elige la rama <strong>main</strong> y la raíz (/).</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features">
+      <h2 style="margin-top:18px">Características</h2>
+      <div class="features">
+        <div class="feature">
+          <h4>Rápido</h4>
+          <p class="muted small">Estructura ligera HTML/CSS sin dependencias externas.</p>
+        </div>
+        <div class="feature">
+          <h4>Responsive</h4>
+          <p class="muted small">Vista óptima en móviles, tablets y escritorios.</p>
+        </div>
+        <div class="feature">
+          <h4>Fácil de publicar</h4>
+          <p class="muted small">Sube el repo y activa GitHub Pages o usa Netlify/Vercel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2 style="margin-top:18px">Galería</h2>
+      <div class="gallery">
+        <div class="card"><img src="https://via.placeholder.com/600x360?text=Imagen+1" alt="img1"><p class="small muted" style="margin-top:8px">Imagen 1</p></div>
+        <div class="card"><img src="https://via.placeholder.com/600x360?text=Imagen+2" alt="img2"><p class="small muted" style="margin-top:8px">Imagen 2</p></div>
+        <div class="card"><img src="https://via.placeholder.com/600x360?text=Imagen+3" alt="img3"><p class="small muted" style="margin-top:8px">Imagen 3</p></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div>
+        <h2>Contacto</h2>
+        <p class="muted small">Envia un mensaje rápido — este formulario no envía por backend, pero el JavaScript demostrará validación básica.</p>
+
+        <form id="contactForm" class="card" onsubmit="return false;">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" required placeholder="Tu nombre">
+
+          <label for="email" style="margin-top:10px">Correo</label>
+          <input id="email" name="email" type="email" required placeholder="tu@ejemplo.com">
+
+          <label for="message" style="margin-top:10px">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje..."></textarea>
+
+          <div style="display:flex;gap:8px;margin-top:12px;align-items:center">
+            <button class="submit" id="sendBtn">Enviar</button>
+            <div id="status" class="small muted" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h4>Información</h4>
+          <p class="muted small">Dirección: Ciudad, País<br>Tel: +52 55 1234 5678</p>
+          <p style="margin-top:8px" class="small">O copia el enlace público cuando publiques el repo.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="muted small">© <span id="year"></span> MiSitio.dev — Hecho con ❤️ · <a href="https://github.com/anthonydanie/web-proyecto1" target="_blank" rel="noreferrer">Repo</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // UI mínimos: menu toggle (móvil), formulario demo y año dinámico.
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // menú hamburguesa abre/ cierra nav simple
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn && menuBtn.addEventListener('click', () => {
+      const navUl = document.querySelector('nav ul');
+      if (!navUl) return;
+      navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+      navUl.style.flexDirection = 'column';
+      navUl.style.background = 'rgba(255,255,255,0.02)';
+      navUl.style.position = 'absolute';
+      navUl.style.right = '24px';
+      navUl.style.top = '64px';
+      navUl.style.padding = '12px';
+      navUl.style.borderRadius = '8px';
+      navUl.style.boxShadow = '0 8px 24px rgba(2,6,23,0.12)';
+    });
+
+    // Demo: validación simple y "envío" simulado
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('status');
+    const sendBtn = document.getElementById('sendBtn');
+    sendBtn && sendBtn.addEventListener('click', () => {
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      sendBtn.disabled = true;
+      status.textContent = 'Enviando...';
+
+      // simulamos envío (aquí podrías integrar fetch() a un endpoint real)
+      setTimeout(() => {
+        status.textContent = 'Mensaje enviado. ¡Gracias!';
+        sendBtn.disabled = false;
+        form.reset();
+      }, 900);
+    });
+  </script>
+</body>
+</html>
